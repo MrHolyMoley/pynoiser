@@ -9,9 +9,8 @@ window = Tk()
 window.title = "Pynoiser"
 window.geometry("400x400")
 window.configure(background = "gray27")
-#frame = ttk.Frame(window, padding = 10)
 
-# Title Text
+# Window text
 title_label = Label(window, text = "Pynoiser", font = "Monospace 24", foreground = "white", background = "gray27")
 title_label.pack(pady = 10)
 
@@ -24,7 +23,7 @@ footer_label.pack(side = "bottom", pady = 10)
 # Initiate the Pygame Audio mixer
 pygame.mixer.init()
 
-# Play sounds
+# Play and stop sounds
 def play():
     pygame.mixer.music.load(brown_noise)
     pygame.mixer.music.play(loops = 10)
